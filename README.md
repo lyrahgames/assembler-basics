@@ -1,4 +1,4 @@
-# GNU Assembler Basics
+# Assembler Basics
 
 ## Requirements
 - Instruction Set Architecture: x86_64
@@ -18,3 +18,5 @@
 - [System V ABI](https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf)
 - [FLAGS Register](https://en.wikipedia.org/wiki/FLAGS_register)
 - [Status Register](https://en.wikipedia.org/wiki/Status_register)
+- [NASM - The Netwide Assembler: Manual](https://www.nasm.us/doc/)
+- [Using GNU AS](https://www.ndsl.kaist.edu/ee209/references/gnu-assembler.pdf)
