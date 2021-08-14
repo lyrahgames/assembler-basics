@@ -1,6 +1,6 @@
-.global main
-
 .text
+
+.global main
 main:
   cmp $3, %rdi
   jne error
@@ -14,25 +14,40 @@ main:
   // atoi(argv[2])
   mov 0x10(%r12), %rdi
   call atoi
+  // Negative exponents are not allowed.
+  cmp $0, %eax
+  jl negative_exponent_error
   mov %eax, %r13d
+
   // atoi(argv[1])
   mov 0x08(%r12), %rdi
   call atoi
   mov %eax, %r14d
 
-  add %r14d, %r13d
+  mov %r14, %rdi
+  mov %r13, %rsi
+  call power
 
   // printf()
+  mov %rax, %rsi
   mov $result_format_string, %rdi
-  mov %r13, %rsi
+  // movslq %eax, %rsi
   xor %rax, %rax
   call printf
 
+  xor %rax, %rax
+  jmp done
+
+  negative_exponent_error:
+    mov $exception_negative_exponent, %rdi
+    call puts
+    mov $-1, %rax
+
+  done:
   pop %r14
   pop %r13
   pop %r12
 
-  xor %rax, %rax
   ret
 
   error:
@@ -61,3 +76,6 @@ usage_format_string:
 
 result_format_string:
   .asciz "%i\n"
+
+exception_negative_exponent:
+  .asciz "No negative exponent allowed."

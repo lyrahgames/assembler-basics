@@ -1,8 +1,9 @@
-# Start Address of the Program
-.global _start
-
 # Text Section Containing the Code
+
 .text
+# Symbol '_start' marks start address of the Program.
+# Has to be made globally accessible to be used by the linker.
+.global _start
 _start:
   # Prepare system call to write message on stdout.
   mov $1, %rax

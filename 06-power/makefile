@@ -1,5 +1,5 @@
 TARGET := power
-SOURCES := main.s
+SOURCES := $(wildcard *.s)
 
 .PHONY: update clean test
 
@@ -9,9 +9,10 @@ clean:
 	rm -f $(TARGET)
 
 test: $(TARGET)
-	./$< 10 13
-	./$< -5 8
-	./$< 952 -457
+	./$< 2 4
+	./$< 3 2
+	./$< 10 5
+	./$< -5 5
 
 # We need static linkage to compile the program.
 # Moving the address of labels seems to be the problem.
