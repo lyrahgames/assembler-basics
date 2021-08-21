@@ -1,0 +1,13 @@
+objects =
+for t: casm{*}
+{
+  n = $name($t)
+  objects += obje{$n}
+  obje{$n}: $t
+  {{
+    diag c casm{$name($<)}
+    $c.path $c.poptions $c.coptions -o $path($>) -c $path($<)
+  }}
+}
+
+./: exe{print}: $objects

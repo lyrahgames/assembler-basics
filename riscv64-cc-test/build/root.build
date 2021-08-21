@@ -1,0 +1,8 @@
+using c
+
+define casm: file
+casm{*}: extension = s
+obje{*}: extension = o
+
+test.target = $c.target
+exe{*}: test = true

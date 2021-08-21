@@ -8,7 +8,11 @@
 !*.cpp
 
 !makefile
+
 !buildfile
+!bootstrap.build
+!root.build
+!*.config
 
 !*.md
 

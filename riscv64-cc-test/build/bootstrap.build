@@ -1,0 +1,4 @@
+project = riscv64-gcc-test
+
+using config
+using test
