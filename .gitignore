@@ -8,6 +8,7 @@
 !*.cpp
 
 !makefile
+!buildfile
 
 !*.md
 

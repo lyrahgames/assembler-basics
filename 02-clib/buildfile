@@ -1,0 +1,23 @@
+using c
+
+# Assembler Files Used with C Compiler
+define casm: file
+casm{*}: extension = s
+obje{*}: extension = o
+
+test.target = $c.target
+
+exe{*}: test = true
+
+objects =
+for t: casm{*}
+{
+  objects += obje{$name($t)}
+  obje{$name($t)}: $t
+  {{
+    diag c $<
+    $c.path $c.poptions $c.coptions -o $path($>) -c $path($<)
+  }}
+}
+
+./: exe{print}: $objects
