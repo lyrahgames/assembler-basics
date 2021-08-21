@@ -1,16 +1,21 @@
 TARGET := print
-SOURCES := main.s
+SOURCES := $(wildcard *.s)
+OBJECTS := $(SOURCES:.s=.o)
 
 .PHONY: update clean test
 
 update: $(TARGET)
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGET) $(OBJECTS)
 
 test: $(TARGET)
 	./$<
 
-# We need static linkage to compile the program.
-$(TARGET): $(SOURCES)
-	gcc -o $@ $^ -static
+# Use the C compiler to link your target.
+$(TARGET): $(OBJECTS)
+	$(CC) $(LDFLAGS) -o $@ $^ $(CLIBS)
+
+# Use the C compiler to call the assembler.
+%.o: %.s
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ -c $<
