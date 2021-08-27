@@ -1,0 +1,7 @@
+exe{fibonacci}: {h c}{*} obje{$name(s{*})}
+{
+  test = true
+}
+
+for n: $name(s{*})
+  obje{$(n).o}: s{$n}

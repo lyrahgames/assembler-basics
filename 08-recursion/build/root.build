@@ -1,0 +1,14 @@
+using c
+
+h{*}: extension = h
+c{*}: extension = c
+
+test.target = $cxx.target
+
+# Assembler File Type for C Compiler
+define s: file
+s{*}: extension = s
+obje{~'/(.*)/'}: s{~'/\1/'}
+{{
+  $c.path -o $path($>) -c -x assembler $path($<)
+}}
