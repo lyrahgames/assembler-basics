@@ -6,6 +6,10 @@
 - Compiler Toolchain: GCC (GNU Assembler, GNU Binutils)
 
 ## References
+- Jo Van Hoey, *Beginning x64 Assembly Programming: From Novice to AVX Professional*, 2019
+- Daniel Kusswurm, *Modern x86 Assembly Language Programming: 32-bit, 64-bit, SSE, and AVX*, 2014
+- Agner Fog, *Optimization Manuals: 5. Calling Conventions for Different C++ Compilers and Operating Systems*, 2020
+
 - [GNU Assembler Examples](https://cs.lmu.edu/~ray/notes/gasexamples/)
 - [Makefile Tutorial](https://makefiletutorial.com/)
 - [x86_64](https://en.wikipedia.org/wiki/X86-64)
