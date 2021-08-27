@@ -1,9 +1,7 @@
 # Assembler Basics
 
-## Requirements
-- Instruction Set Architecture: x86_64
-- Operating System: Linux
-- Compiler Toolchain: GCC (GNU Assembler, GNU Binutils)
+## Basics
+Assembly language programming heavily depends on the chosen instruction set architecture (ISA), the calling conventions of your operating system including kernel/interrupt/system calling conventions, standard calling conventions, and library calling conventions, and the chosen assembler toolchain, like GNU or NASM.
 
 ## References
 - Jo Van Hoey, *Beginning x64 Assembly Programming: From Novice to AVX Professional*, 2019
