@@ -20,3 +20,5 @@
 - [Status Register](https://en.wikipedia.org/wiki/Status_register)
 - [NASM - The Netwide Assembler: Manual](https://www.nasm.us/doc/)
 - [Using GNU AS](https://www.ndsl.kaist.edu/ee209/references/gnu-assembler.pdf)
+- [Stack Frame Layout on x86-64](https://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64/)
+- [Where the Top of the Stack is on x86-64](https://eli.thegreenplace.net/2011/02/04/where-the-top-of-the-stack-is-on-x86/)
