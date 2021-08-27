@@ -1,0 +1,4 @@
+project = sum
+
+using config
+using test

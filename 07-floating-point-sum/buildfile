@@ -1,0 +1,15 @@
+exe{sum}: {h c}{*} obje{$name(s{*})}
+{
+  test = true
+}
+
+# Dependency Declarations for Assembler Files
+for n: $name(s{*})
+  obje{$(n).o}: s{$n}
+
+# Pattern-Matching Dependency Declaration
+obje{~'/(.*)/'}: s{~'/\1/'}
+{{
+  diag c $<
+  $c.path -o $path($>) -c -x assembler $path($<)
+}}

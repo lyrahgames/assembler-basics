@@ -1,0 +1,10 @@
+using c
+
+h{*}: extension = h
+c{*}: extension = c
+
+test.target = $c.target
+
+# Assembler File Types for C Compiler
+define s: file
+s{*}: extension = s
